@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Khởi động PHP-FPM
-php-fpm
+systemctl start php-fpm
 
 # Thêm các lệnh khởi động Nginx hoặc các dịch vụ khác nếu cần
 
