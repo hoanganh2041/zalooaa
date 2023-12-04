@@ -60,13 +60,7 @@ RUN chmod -R 755 /var/www/zalooa/storage
 
 # Expose cổng mặc định cho Nginx
 EXPOSE 80
-# Copy script khởi động vào container
-COPY start.sh /usr/local/bin/start.sh
 
-# Thiết lập quyền thực thi cho script
-RUN chmod +x /usr/local/bin/start.sh
-
-# CMD chạy script khi container khởi động
-CMD ["/usr/local/bin/start.sh"]
 # CMD để chạy Nginx và PHP-FPM
 CMD ["nginx", "-g", "daemon off;"]
+CMD ["php-fpm", "-g", "daemon off;"]
